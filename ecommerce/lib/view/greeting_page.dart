@@ -15,9 +15,13 @@ class GreetingPage extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //Logo of the app
-              Image.asset(
-                'assets/logos/adidas_logo.png',
-                height: 250,
+              AspectRatio(
+                aspectRatio: 16/9,
+                child: 
+                Image.asset(
+                  'assets/logos/adidas_logo.png',
+                  height: 200,
+                ),
               ),
           
               const SizedBox(height: 50,),
@@ -53,19 +57,24 @@ class GreetingPage extends StatelessWidget {
                     builder: (context) => const HomePage()
                   )
                 ),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Colors.black,
-                    borderRadius: BorderRadius.circular(10)
-                  ),
-                  padding: const EdgeInsets.all(25),
-                  child: const Center(
-                    child: Text(
-                      'Shop Now',
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 18,
-                        color: Colors.white
+                child: AspectRatio(
+                  aspectRatio: 2/.3,
+                  child: Container(
+                    width: 100,
+                    height: 100,
+                    decoration: BoxDecoration(
+                      color: Colors.black,
+                      borderRadius: BorderRadius.circular(10)
+                    ),
+                    // padding: const EdgeInsets.all(25),
+                    child: const Center(
+                      child: Text(
+                        'Shop Now',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.white
+                        ),
                       ),
                     ),
                   ),
