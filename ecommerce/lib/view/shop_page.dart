@@ -21,12 +21,13 @@ class _ShopPageState extends State<ShopPage> {
     showDialog(
       context: context,
       builder: (context) => 
-        AlertDialog(
+        const AlertDialog(
           title: Text('Shoe added to cart'),
           content: Text('Check cart'),
         )
     );
   }
+
   @override
   Widget build(BuildContext context) {
     return Consumer<Cart>(
