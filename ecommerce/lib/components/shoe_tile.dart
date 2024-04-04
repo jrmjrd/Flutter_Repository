@@ -24,6 +24,7 @@ class ShoeTile extends StatelessWidget {
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //Shoe Picture
           Center(
@@ -39,7 +40,8 @@ class ShoeTile extends StatelessWidget {
         
           //Description
           Text(
-            shoe.description
+            shoe.description,
+            textAlign: TextAlign.center,
           ),
 
           //Shoe Price

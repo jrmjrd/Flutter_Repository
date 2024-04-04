@@ -6,28 +6,28 @@ class Cart extends ChangeNotifier{
   //list of shoes for sale
   List<Shoe> shoeItems = [
     Shoe(
-      name: 'Shoe1', 
+      name: 'Adidas Shoe 1', 
       price: '480', 
       imageSource: 'assets/shoe_images/shoe1.png', 
-      description: 'Lopet lods'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
     ),
     Shoe(
-      name: 'Shoe2', 
+      name: 'Adidas Shoe 2', 
       price: '570', 
       imageSource: 'assets/shoe_images/shoe2.png', 
-      description: 'Agnas lods'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
     ),
     Shoe(
-      name: 'Shoe3', 
+      name: 'Adidas Shoe 3', 
       price: '900', 
       imageSource: 'assets/shoe_images/shoe3.png', 
-      description: 'Sheeshable lods'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
     ),
     Shoe(
-      name: 'Shoe4', 
+      name: 'Adidas Shoe 4', 
       price: '100', 
       imageSource: 'assets/shoe_images/shoe4.png', 
-      description: 'HEY HET HEY'
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. '
     ),
   ];
 
@@ -51,7 +51,11 @@ class Cart extends ChangeNotifier{
     notifyListeners();
   }
 
-
+  void referesh(){
+    List<Shoe> refreshShoe = shoeItems;
+    notifyListeners();
+    return ;
+  }
   //remove item in cart
   void deleteItem(Shoe shoe){
     cartItems.remove(shoe);
